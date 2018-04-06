@@ -1,5 +1,5 @@
 Solves Riddler Classic from [When Will The Arithmetic Anarchists Attack?](https://fivethirtyeight.com/features/when-will-the-arithmetic-anarchists-attack/)
 
-Run with `./find_winners.py ncaa_games.txt` or `python find_winners.py ncaa_games.txt`. Optionally, enter a filename as a second argument to save the champions (and their degree of seperation from Villanova) to that file.
+Run with `./find_winners.py ncaa_games.txt` or `python find_winners.py ncaa_games.txt`. Optionally, enter a filename as a second argument to save the champions (and their degree of seperation from Villanova) to that file. Teams that were not the champion are printed with a degree of seperation equal to -1.
 
 Game data is from [here](https://www.masseyratings.com/scores.php?s=298892&sub=12801&all=1)

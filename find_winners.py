@@ -38,13 +38,14 @@ def main():
         new_champions = additions
 
     not_champions = teams - set(champions.keys())
-    for not_champion in not_champions:
-        print(not_champion)
+    print("There were {} transative champions and {} not champions".format(len(champions) - 1, len(not_champions)))
 
     if len(sys.argv) >= 3:
         with open(sys.argv[2], "w") as file:
             for champion, degree in sorted(champions.items(), key=lambda t: t[1]):
                 print(champion, degree, sep="\t", file=file)
+            for not_champion in not_champions:
+                print(not_champion, "-1", sep="\t", file=file)
 
 
 def parse_games(file):

@@ -38,7 +38,7 @@ def main():
         new_champions = additions
 
     not_champions = teams - set(champions.keys())
-    print("There were {} transative champions and {} not champions".format(len(champions) - 1, len(not_champions)))
+    print("There were {} transitive champions and {} not champions".format(len(champions) - 1, len(not_champions)))
 
     if len(sys.argv) >= 3:
         with open(sys.argv[2], "w") as file:

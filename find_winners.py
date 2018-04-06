@@ -37,10 +37,14 @@ def main():
                     additions.append(winner)
         new_champions = additions
 
-    not_champion = teams - set(champions.keys())
-    print(not_champion)
-    for champion, degree in sorted(champions.items(), key=lambda t: t[1]):
-        print(champion, degree, sep='\t')
+    not_champions = teams - set(champions.keys())
+    for not_champion in not_champions:
+        print(not_champion)
+
+    if len(sys.argv) >= 3:
+        with open(sys.argv[2], "w") as file:
+            for champion, degree in sorted(champions.items(), key=lambda t: t[1]):
+                print(champion, degree, sep="\t", file=file)
 
 
 def parse_games(file):
